@@ -55,7 +55,7 @@ public class BlinkUIText : MonoBehaviour {
 	void Update () {
 		// int型の上限値に近くなったら強制的にリセット
 		if ( counter > 2147483071 ) counter = 0;
-		// 予め計算された配列を使って、透明度を変化させる
+		// 予め計算された配列を使って、透明度を変化させるためのインデックスの計算
 		int indx = counter%180;
 		// 透明度をアサイン
 		textField.color = alphaTable[indx];
